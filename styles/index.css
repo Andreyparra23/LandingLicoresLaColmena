@@ -1,0 +1,254 @@
+/* iniciamos con selector universal */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* siguiente declarar variables */
+/* variables en CSS */
+/* hace referencia a el archivo raiz ->htmls todas las variables declaradas en root pueden ser usadas para todo el proyecto */
+/* paleta de colores, tipografias, tamaños o medidas */
+/* ejemplo */
+
+:root {
+    --primarycolor: #F2B705;
+    --background-color: #0D0D0D;
+    --textcolor: #F2F2F2;
+    --tipography: 'Arial', Helvetica;
+}
+
+
+/* tercera parte body */
+body {
+
+    /* delimitar el sitio web */
+    background-color: var(--background-color);
+    width: 100vw;
+    height: auto;
+    /* el dimensionamiento de la caja / que se respeten las dimensiones  */
+    box-sizing: border-box;
+    /* declarar tipografia */
+    font-family: var(--tipography);
+    /* para gestionar scroll */
+    /* si el contenido sobresale en x esto lo oculta */
+    overflow-x: hidden;
+
+
+
+
+    /* -----------------------HEADER---------------------- */
+
+
+    /* inicio barra de navegacion */
+    /* vw -> view width (ancho de pantalla) */
+    /* vw -> view weight (alto de pantalla) */
+    .container-navBar {
+
+        width: 100vw;
+    }
+
+    .navBAR-list {
+        width: 100vw;
+        background-color: var(--background-color);
+        display: flex;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        /* alinear las letras al centro */
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+
+    }
+
+
+    #logo {
+        width: 100px;
+    }
+
+    li {
+        width: 100%;
+        height: 100%;
+        font-family: var(--tipography);
+        font-weight: bold;
+        color: var(--primarycolor);
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* --------------BANNER----------- */
+
+
+    .container-banner {
+        width: 100vw;
+        height: 600px;
+        position: relative;
+    }
+
+    /* ------------BOTON-------------- */
+    .Buttom {
+        background-color: var(--textcolor);
+        color: var(--primarycolor);
+        /* los valores se asignan en el siguiente orden */
+        /* 1er valor arriba y abajo */
+        /* 2do valor izquierda a derecha */
+        padding: 20px 50px;
+        /* para dar redondeo se usa border radius */
+        border-radius: 20px;
+        /* para poder mover el boton como se quiera */
+        /*  en el padre "position: relative; y en el hijo "position: absolute; */
+        position: absolute;
+        bottom: 50%;
+        left: 45%;
+
+        /* para que el cursor cambie a manito al pasar por encima de el boton */
+        cursor: pointer;
+    }
+
+    /* pseudoclase -> nos extiende funcionalidades de estilo a nuestras clases */
+    /* accion de pasar el mouse por encima */
+    .Buttom:hover {
+        background-color: var(--primarycolor);
+        color: var(--background-color);
+    }
+}
+
+/*------------ FIN DEL BODY------------ */
+
+/* -----------INICIO DEL MAIN---------- */
+
+main {
+    color: var(--textcolor);
+}
+
+    /* INICIO SECCION QUIENES SOMOS */
+    .contentsectionuno {
+
+        width: 80vw;
+        margin: auto;
+    }
+
+
+    .title {
+        color: var(--primarycolor);
+        font-size: 50px;
+        text-align: right;
+        margin-top: 90px;
+        margin-right: 80px;
+    }
+
+    .containerarticle {
+        /* hereda el ancho del papa -> section */
+        width: 100%;
+        display: flex;
+        /* centrar los elementos dentro del contenedor */
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .containerarticle img {
+        width: 50%;
+        height: 50vw;
+        border-radius: 2%;
+
+    }
+
+    .containerarticle p {
+        width: 50%;
+        color: var(--textcolor);
+        font-size: 40px;
+        text-align: justify;
+        line-height: 50px;
+        /* espaciado entre letras */
+        letter-spacing: 8px;
+
+    }
+
+    /* FIN SECCION QUIENES SOMOS */
+
+
+
+    /* INICIO QUE HACEMOS */
+
+    .containerquehacemos {
+        height: 800px;
+        width: 100%;
+
+    }
+
+    .containerquehacemos h2 {
+        text-align: center;
+        font-size: 60px;
+        margin-top: 100px;
+        color: var(--background-color);
+        background-color: var(--textcolor);
+    }
+
+    .conocequehacemos {
+        width: 100vw;
+        display: flex;
+        justify-content: left;
+        
+    }
+
+
+
+    .conocequehacemos p {
+        width: 50%;
+        text-align: center;
+        font-size: 50px;
+        margin-top: 80px;
+    }
+
+    .conocequehacemos iframe {
+        width: 50%;
+        height: 30vw;
+        margin-right: 50px;
+        align-content: center;
+    }
+
+    /* FIN SECCION QUE HACEMOS */
+
+    /* INICIO SECCION FOTO GALERIA */
+
+    /* para organizar el contenido en cuadricula */
+
+    .containerfotogaleria h1 {
+        font-size: 50px;
+        background-color: var(--primarycolor);
+        color: var(--background-color);
+        text-align: center;
+
+    }
+
+    .galery {
+        display: grid;
+        /* cuantas filas van a usar */
+        grid-template-rows: 1fr 1fr;
+        /* cuantas columnas van a usar */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .galery img {
+        width: 100%;
+    }
+
+    /* FIN FOTO GALERIA */
+
+    /* FIN MAIN */
+
+
+    /* INICIO FOOTER */
+
+
+    .titulofooter {
+    c
+        padding: 100px;
+        background-color: var(--background-color);
+        text-align: center;
+color: var(--textcolor);
+
+    }
+
+    /* FIN FOOTER */
